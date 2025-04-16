@@ -1,0 +1,26 @@
+[
+  { 
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "item": "Sauce Labs Backpack",
+    "firstName": "User",
+    "lastName": "Test",
+    "postalCode": "123456"
+  },
+  { 
+    "username": "problem_user",
+    "password": "secret_sauce",
+    "item": "Sauce Labs Bolt T-Shirt",
+    "firstName": "Admin",
+    "lastName": "Test",
+    "postalCode": "123456"
+  },
+  { 
+    "username": "performance_glitch_user",
+    "password": "secret_sauce",
+    "item": "Sauce Labs Onesie",
+    "firstName": "User",
+    "lastName": "Test",
+    "postalCode": "123456"
+  }
+]
