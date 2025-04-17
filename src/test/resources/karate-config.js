@@ -23,6 +23,6 @@ function fn() {
   }
 
   return {
-    baseUrl: 'https://www.saucedemo.com'
+    baseUrl: 'https://www.saucedemo.com/v1'
   };
 }
