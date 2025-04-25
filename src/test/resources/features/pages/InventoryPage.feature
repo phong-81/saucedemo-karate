@@ -1,7 +1,11 @@
 Feature: Inventory Page
 
+Background:
+  * def user = __arg
+  * def itemSelector = "//div[normalize-space(@class)='inventory_item_name' and normalize-space(text())='" + user.item + "']/ancestor::div[contains(@class, 'inventory_item')]//button"
+  * def cartLink = ".shopping_cart_link"
+
+@addToCart
 Scenario: Add an item to cart
-  Given def user = __arg
-  And def itemSelector = "//div[@class='inventory_item_name' and text()='" + user.item + "']/ancestor::div[@class='inventory_item']//button"
-  When click(itemSelector)
-  Then click('.shopping_cart_link')
+  * click(itemSelector)
+  * click(cartLink)

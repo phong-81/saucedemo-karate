@@ -1,10 +1,17 @@
 Feature: Checkout Page
 
+Background:
+  * def user = __arg
+  * def firstName = "//input[@data-test='firstName']"
+  * def lastName = "//input[@data-test='lastName']"
+  * def postalCode = "//input[@data-test='postalCode']"
+  * def continueBtn = "//input[@type='submit' and @value='CONTINUE']"
+  * def finishBtn = "//a[@class='btn_action cart_button' and text()='FINISH']"
+
+@completeCheckout
 Scenario: Complete checkout process
-  * def sleep = function(pause){ java.lang.Thread.sleep(pause*1000) }
-  Given def user = __arg
-  And input('#first-name', user.firstName)
-  And input('#last-name', user.lastName)
-  And input('#postal-code', user.postalCode)
-  Then click("input[value='CONTINUE']")
-  Then click('{a}FINISH')
+  * input(firstName, user.firstName)
+  * input(lastName, user.lastName)
+  * input(postalCode, user.postalCode)
+  * click(continueBtn)
+  * click(finishBtn)

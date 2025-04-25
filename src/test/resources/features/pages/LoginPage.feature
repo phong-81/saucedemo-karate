@@ -1,10 +1,17 @@
 Feature: Login Page
 
+Background:
+  * def user = __arg
+  * driver baseUrl
+  * def userName = "//input[@data-test='username']"
+  * def password = "//input[@data-test='password']"
+  * def loginBtn = "//input[@id='login-button']"
+  * def inventoryList = ".inventory_list"
+
+@login
 Scenario: login with username and password
-  Given def user = __arg
-  When driver baseUrl
-  And input('#user-name', user.username)
-  And input('#password', user.password)
-  And click('#login-button')
-  Then waitFor('.inventory_list')
+  * input(userName, user.username)
+  * input(password, user.password)
+  * click(loginBtn)
+  * waitFor(inventoryList)
 
